@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for Chess-system" enabled="true">
+        <sourceOutputDir name="Chess-System/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="Chess-System/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Chess-system" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
