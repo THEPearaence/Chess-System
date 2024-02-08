@@ -3,6 +3,7 @@ package Chess;
 import Chess.pieces.King;
 import Chess.pieces.Rook;
 import boardgame.Board;
+import boardgame.Piece;
 import boardgame.Position;
 
 import java.awt.*;
@@ -26,6 +27,27 @@ public class ChessMatch {
         return mat;
     }
 
+    public ChessPiece performChessMove(ChessPosition sourcePosition,ChessPosition targetPosition){
+        Position source = sourcePosition.toPosition();
+        Position target = targetPosition.toPosition();
+        validateSourcePosition(source);
+        Piece capturedpiece = makeMove(source, target);
+        return (ChessPiece) capturedpiece;
+    }
+    
+    private Piece makeMove(Position source, Position target){
+        Piece p = board.removePiece(source);
+        Piece capturedPiece = board.removePiece(target);
+        board.placePiece(p, target);
+        return capturedPiece;
+    }
+    
+    private void validateSourcePosition(Position position){
+        if (!board.threIsAPiece(position)){
+            throw new ChessException("there is no Piece on source position");
+        }
+    }
+    
     private void placeNewPiece(char column, int row, ChessPiece piece){
         board.placePiece(piece, new ChessPosition(column,row).toPosition());
     }
