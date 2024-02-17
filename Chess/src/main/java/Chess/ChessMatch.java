@@ -193,6 +193,7 @@ public class ChessMatch {
 
     private void initialSetup(){
 
+        placeNewPiece('d', 1, new Queen(board, Color.WHITE));
         placeNewPiece('g', 1, new Knight(board, Color.WHITE));
         placeNewPiece('b', 1, new Knight(board, Color.WHITE));
         placeNewPiece('f', 1, new Bichop(board, Color.WHITE));
@@ -210,6 +211,7 @@ public class ChessMatch {
         placeNewPiece('h', 2, new Pawn(board, Color.WHITE));
 
 
+        placeNewPiece('d', 8, new Queen(board, Color.BLACK));
         placeNewPiece('g', 8, new Knight(board, Color.BLACK));
         placeNewPiece('b', 8, new Knight(board, Color.BLACK));
         placeNewPiece('f', 8, new Bichop(board, Color.BLACK));
