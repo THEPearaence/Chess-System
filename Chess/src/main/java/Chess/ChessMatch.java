@@ -1,9 +1,6 @@
 package Chess;
 
-import Chess.pieces.Bichop;
-import Chess.pieces.King;
-import Chess.pieces.Pawn;
-import Chess.pieces.Rook;
+import Chess.pieces.*;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
@@ -196,6 +193,8 @@ public class ChessMatch {
 
     private void initialSetup(){
 
+        placeNewPiece('g', 1, new Knight(board, Color.WHITE));
+        placeNewPiece('b', 1, new Knight(board, Color.WHITE));
         placeNewPiece('f', 1, new Bichop(board, Color.WHITE));
         placeNewPiece('c', 1, new Bichop(board, Color.WHITE));
         placeNewPiece('h', 1, new Rook(board, Color.WHITE));
@@ -211,6 +210,8 @@ public class ChessMatch {
         placeNewPiece('h', 2, new Pawn(board, Color.WHITE));
 
 
+        placeNewPiece('g', 8, new Knight(board, Color.BLACK));
+        placeNewPiece('b', 8, new Knight(board, Color.BLACK));
         placeNewPiece('f', 8, new Bichop(board, Color.BLACK));
         placeNewPiece('c', 8, new Bichop(board, Color.BLACK));
         placeNewPiece('h', 8, new Rook(board, Color.BLACK));
