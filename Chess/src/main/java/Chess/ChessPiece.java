@@ -4,7 +4,6 @@ import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
 
-import java.awt.*;
 
 public abstract class ChessPiece extends Piece {
 

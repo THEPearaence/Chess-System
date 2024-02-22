@@ -3,8 +3,7 @@ package Chess.pieces;
 import Chess.ChessPiece;
 import boardgame.Board;
 import boardgame.Position;
-
-import java.awt.*;
+import Chess.Color;
 
 public class Queen extends ChessPiece {
     public Queen(Board board, Color color) {

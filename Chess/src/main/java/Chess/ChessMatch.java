@@ -5,7 +5,6 @@ import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -129,7 +128,7 @@ public class ChessMatch {
 
         //#specilmove en passant
         if(p instanceof Pawn){
-            if(source.getColum() != target.getColum() && capturedPieces == null){
+            if(source.getColum() != target.getColum() && capturedPiece == null){
                 Position pawnPosition;
                 if(p.getColor() == Color.WHITE){
                     pawnPosition = new Position(target.getRow()+1,target.getColum());
@@ -138,8 +137,9 @@ public class ChessMatch {
                     pawnPosition = new Position(target.getRow()-1,target.getColum());
                 }
                 capturedPiece = board.removePiece(pawnPosition);
-                capturedPieces.add(capturedPiece);
                 piecesOnTheBosrd.remove(capturedPiece);
+                capturedPieces.add(capturedPiece);
+
             }
         }
 
@@ -177,7 +177,7 @@ public class ChessMatch {
 
         //#specilmove en passant
         if(p instanceof Pawn){
-            if(source.getColum() != target.getColum() && capturedPieces == enPassantVulnerable){
+            if(source.getColum() != target.getColum() && capturedPiece == enPassantVulnerable){
                 ChessPiece pawn = (ChessPiece)board.removePiece(target);
                 Position pawnPosition;
                 if(p.getColor() == Color.WHITE){

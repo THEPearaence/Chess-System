@@ -3,8 +3,9 @@ package application;
 import Chess.ChessMatch;
 import Chess.ChessPiece;
 import Chess.ChessPosition;
+import Chess.Color;
 
-import java.awt.*;
+
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;

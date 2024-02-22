@@ -4,8 +4,7 @@ import Chess.ChessMatch;
 import Chess.ChessPiece;
 import boardgame.Board;
 import boardgame.Position;
-
-import java.awt.*;
+import Chess.Color;
 
 public class King extends ChessPiece {
 
